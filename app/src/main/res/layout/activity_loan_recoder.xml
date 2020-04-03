@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/smartRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <com.scwang.smartrefresh.header.MaterialHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yinduowang.installment.app.widget.TitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            tools:ignore="MergeRootFrame">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapseToolbarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fitsSystemWindows="true"
+                    app:expandedTitleTextAppearance="@style/toolbarTitle"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/width_15dp"
+                        android:layout_marginTop="@dimen/width_14dp"
+                        android:layout_marginBottom="@dimen/width_8dp"
+                        android:text="借款记录"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_27sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <com.qmuiteam.qmui.layout.QMUILinearLayout
+                    android:id="@+id/qmuiLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="pin">
+
+
+                    <LinearLayout
+                        android:id="@+id/llShopStageRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="@dimen/width_12dp"
+                        android:layout_marginBottom="@dimen/width_6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvShopStaging"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="商城分期"
+                            android:textColor="@color/color_333333"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/vOneBottom"
+                            android:layout_width="22dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_bg_line"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_history_appointment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="@dimen/width_12dp"
+                        android:layout_marginBottom="@dimen/width_6dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/llShopStageRecord"
+                        app:layout_constraintStart_toEndOf="@+id/llShopStageRecord">
+
+                        <TextView
+                            android:id="@+id/tvCashLoan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="现金借款"
+                            android:textColor="@color/color_9A9A9A"
+                            android:textSize="@dimen/size_14sp" />
+
+                        <View
+                            android:id="@+id/vTwoBottom"
+                            android:layout_width="22dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_bg_line"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </com.qmuiteam.qmui.layout.QMUILinearLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/bg_gradient_order"
+                app:layout_behavior=".app.widget.FollowBehavior" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.qmuiteam.qmui.widget.QMUIObservableScrollView
+            android:id="@+id/qmuiObservableScrollView"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_189dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/bg_mine_top" />
+
+
+                <ImageView
+                    android:id="@+id/ivMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="@dimen/width_10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clMyUp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@mipmap/ic_message" />
+
+                <ImageView
+                    android:id="@+id/ivUnreadMessage"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="26dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivMessage"
+                    app:layout_constraintStart_toStartOf="@+id/ivMessage"
+                    app:srcCompat="@drawable/shape_circle_red" />
+
+                <ImageView
+                    android:id="@+id/ivMyAdBg"
+                    android:layout_width="match_parent"
+                    app:layout_constraintDimensionRatio="345:67"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clMyUp"
+                    app:srcCompat="@mipmap/ic_my_ad_bg" />
+
+                <TextView
+                    android:id="@+id/tvMyAdTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:textColor="@color/color_F0F0F0"
+                    android:textSize="@dimen/size_14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tvMyAdBottom"
+                    app:layout_constraintStart_toStartOf="@+id/ivMyAdBg"
+                    app:layout_constraintTop_toTopOf="@+id/ivMyAdBg"
+                    app:layout_constraintVertical_bias="0.30"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tvMyAdBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.5"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/color_CFD0E5"
+                    android:layout_marginStart="21dp"
+                    android:textSize="@dimen/size_11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivMyAdBg"
+                    app:layout_constraintStart_toStartOf="@+id/ivMyAdBg"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMyAdTop"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tvMyAdBt"
+                    android:layout_width="78dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="22dp"
+                    android:background="@mipmap/ic_my_ad_bt"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/color_393018"
+                    android:textSize="@dimen/size_13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ivMyAdBg"
+                    app:layout_constraintTop_toTopOf="@+id/tvMyAdTop" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMyQuota"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/ivMyAdBg">
+
+                    <ImageView
+                        android:id="@+id/imageView121"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView241"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView241"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView241"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="查看额度"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView231"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView121"
+                        app:layout_constraintTop_toTopOf="@+id/textView231"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView231"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="我的额度"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBorrowingRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clMyQuota"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView122"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView242"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView242"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView242"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView232"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView122"
+                        app:layout_constraintTop_toTopOf="@+id/textView232"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView232"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="借款记录"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPaymentHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clBorrowingRecord"
+                    app:layout_goneMarginTop="40dp"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView123"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView243"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView243"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView243"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView233"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView123"
+                        app:layout_constraintTop_toTopOf="@+id/textView233"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView233"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="还款记录"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clAuthenticationCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clPaymentHistory"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView124"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAuthenticationStatus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvAuthenticationStatus"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/tvAuthenticationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="未认证"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView234"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView124"
+                        app:layout_constraintTop_toTopOf="@+id/textView234"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView234"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="认证中心"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBankCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clAuthenticationCenter"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView125"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView245"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView245"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView245"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView235"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView125"
+                        app:layout_constraintTop_toTopOf="@+id/textView235"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView235"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="银行卡"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clHelpCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    app:layout_constraintTop_toBottomOf="@+id/clBankCard"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView126"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView246"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView246"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView246"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView236"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView126"
+                        app:layout_constraintTop_toTopOf="@+id/textView236"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView236"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="帮助中心"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/clHelpCenter"
+                    tools:layout_editor_absoluteX="0dp">
+
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="设置"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="@dimen/width_5dp"
+                        android:layout_height="@dimen/width_6dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginRight="12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView24"
+                        app:srcCompat="@mipmap/ic_triangle" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+                        app:layout_constraintTop_toTopOf="@+id/textView23"
+                        app:layout_constraintVertical_bias="1.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/groupUnAuthentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="ivMyAdBg,tvMyAdTop,tvMyAdBottom,tvMyAdBt"
+                    tools:visibility="visible" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMyUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="222dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="63dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/bg_logistics"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginStart="@dimen/width_15dp"
+                        android:layout_marginTop="@dimen/width_17dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_mine_head" />
+
+                    <ImageView
+                        android:id="@+id/ivVipLogin"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pay_back_money"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pay_back_money"
+                        app:srcCompat="@mipmap/ic_vip_gray" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/width_15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvAllShopOrder"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvAllShopOrder"
+                        app:srcCompat="@mipmap/mymy" />
+
+                    <LinearLayout
+                        android:id="@+id/llPaymentOnBehalf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/width_11dp"
+                        android:paddingBottom="@dimen/width_12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/llToBeShipped"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                        <ImageView
+                            android:id="@+id/ivPaymentOnBehalf"
+                            android:layout_width="@dimen/width_40dp"
+                            android:layout_height="@dimen/width_40dp"
+                            android:src="@mipmap/ic_to_be_pay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/width_3dp"
+                            android:text="@string/payment_on_behalf"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/size_12sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llToBeShipped"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/width_11dp"
+                        android:paddingBottom="@dimen/width_12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/llPaymentOnBehalf"
+                        app:layout_constraintEnd_toStartOf="@+id/llToBeReceived"
+                        app:layout_constraintStart_toEndOf="@+id/llPaymentOnBehalf"
+                        app:layout_constraintTop_toTopOf="@+id/llPaymentOnBehalf">
+
+                        <ImageView
+                            android:id="@+id/ivToBeShipped"
+                            android:layout_width="@dimen/width_40dp"
+                            android:layout_height="@dimen/width_40dp"
+                            android:src="@mipmap/ic_to_be_ship" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/width_3dp"
+                            android:text="@string/to_be_shipped"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/size_12sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llToBeReceived"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/width_11dp"
+                        android:paddingBottom="@dimen/width_12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/llPaymentOnBehalf"
+                        app:layout_constraintEnd_toStartOf="@+id/llReturnAfterSale"
+                        app:layout_constraintStart_toEndOf="@+id/llToBeShipped"
+                        app:layout_constraintTop_toTopOf="@+id/llPaymentOnBehalf">
+
+                        <ImageView
+                            android:id="@+id/ivToBeReceived"
+                            android:layout_width="@dimen/width_40dp"
+                            android:layout_height="@dimen/width_40dp"
+                            android:src="@mipmap/ic_to_be_receipt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/width_3dp"
+                            android:text="@string/to_be_received"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/size_12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llReturnAfterSale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/width_11dp"
+                        android:paddingBottom="@dimen/width_12dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/llPaymentOnBehalf"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/llToBeReceived"
+                        app:layout_constraintTop_toTopOf="@+id/llPaymentOnBehalf">
+
+                        <ImageView
+                            android:id="@+id/ivReturnAfterSale"
+                            android:layout_width="@dimen/width_40dp"
+                            android:layout_height="@dimen/width_40dp"
+                            android:src="@mipmap/ic_to_be_after_sale" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/width_3dp"
+                            android:text="@string/return_after_sale"
+                            android:textColor="@color/color_444444"
+                            android:textSize="@dimen/size_12sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_pay_back_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_19sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="@+id/imageView6"
+                        tools:text="139****5545" />
+
+                    <TextView
+                        android:id="@+id/tvUserDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:text="@string/top_hiht"
+                        android:textColor="@color/color_9A9A9A"
+                        android:textSize="@dimen/size_13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivVipLogin"
+                        app:layout_constraintStart_toEndOf="@+id/ivVipLogin"
+                        app:layout_constraintTop_toTopOf="@+id/ivVipLogin" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/my_order"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/size_14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/imageView6"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+                    <TextView
+                        android:id="@+id/tvAllShopOrder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/width_13dp"
+                        android:paddingTop="@dimen/width_10dp"
+                        android:paddingEnd="@dimen/width_25dp"
+                        android:paddingBottom="@dimen/width_10dp"
+                        android:text="@string/full_order"
+                        android:textColor="@color/color_9A9A9A"
+                        android:textSize="@dimen/size_12sp"
+                        android:gravity="right"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vZw"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    app:layout_constraintBottom_toBottomOf="@id/clMyUp"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/ivVip"
+                    android:layout_width="99dp"
+                    android:layout_height="@dimen/width_42dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clMyUp"
+                    app:srcCompat="@mipmap/ic_approval_vip" />
+
+                <TextView
+                    android:id="@+id/tvApprovalVip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivVip"
+                    app:layout_constraintEnd_toEndOf="@+id/ivVip"
+                    app:layout_constraintStart_toStartOf="@+id/ivVip"
+                    app:layout_constraintTop_toTopOf="@+id/ivVip"
+                    app:layout_constraintVertical_bias="0.39" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clMyDown"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/bg_logistics"
+                    android:paddingBottom="33dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vZw">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_title_bill"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_13dp"
+                        android:layout_marginTop="@dimen/width_13dp"
+                        android:text="@string/my_bill"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMallReturned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:textColor="@color/color_444444"
+                        android:textSize="@dimen/size_19sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/view6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_title_bill"
+                        tools:text="0.00" />
+
+                    <TextView
+                        android:id="@+id/tvCashRepaid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_444444"
+                        android:textSize="@dimen/size_19sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view6"
+                        app:layout_constraintTop_toTopOf="@id/tvMallReturned"
+                        tools:text="0.00" />
+
+
+                    <TextView
+                        android:id="@+id/tvShopre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/width_4dp"
+                        android:text="@string/mall_to_be_returned_yuan"
+                        android:textColor="@color/color_9A9A9A"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/view6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMallReturned" />
+
+                    <TextView
+                        android:id="@+id/tvCashReturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/width_4dp"
+                        android:text="@string/cash_to_be_repaid_yuan"
+                        android:textColor="@color/color_9A9A9A"
+                        android:textSize="@dimen/size_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.512"
+                        app:layout_constraintStart_toEndOf="@+id/view6"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCashRepaid" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="@dimen/width_x5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="0dp"
+                        android:background="@color/color_EAEAEA"
+                        app:layout_constraintTop_toTopOf="@id/tvMallReturned"
+                        app:layout_constraintBottom_toBottomOf="@id/tvShopre"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/viewShopRepay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvShopre"
+                        app:layout_constraintLeft_toLeftOf="@id/tvMallReturned"
+                        app:layout_constraintRight_toRightOf="@id/tvMallReturned"
+                        app:layout_constraintTop_toTopOf="@id/tvMallReturned" />
+
+                    <View
+                        android:id="@+id/viewCashRepay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvCashReturn"
+                        app:layout_constraintLeft_toLeftOf="@id/tvCashRepaid"
+                        app:layout_constraintRight_toRightOf="@id/tvCashRepaid"
+                        app:layout_constraintTop_toTopOf="@id/tvCashRepaid" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.qmuiteam.qmui.widget.QMUIObservableScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTopTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_mine_head" />
+
+        <ImageView
+            android:id="@+id/icMessageBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView16"
+            app:srcCompat="@mipmap/ic_message_black" />
+
+        <ImageView
+            android:id="@+id/ivUnreadMessageBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/icMessageBlack"
+            app:layout_constraintEnd_toEndOf="@+id/icMessageBlack"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/icMessageBlack"
+            app:srcCompat="@drawable/shape_circle_red" />
+
+        <TextView
+            android:id="@+id/tvScorllTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text=""
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+            app:layout_constraintStart_toEndOf="@+id/imageView16"
+            app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_x5dp"
+            android:background="@color/color_EAEAEA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

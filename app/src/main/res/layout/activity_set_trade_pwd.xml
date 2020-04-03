@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <com.yinduowang.installment.app.widget.EndCursorEditText
+        android:id="@+id/edPwdKey"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="@dimen/width_35dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:gravity="center|left"
+        android:inputType="number"
+        android:maxLength="6"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_key" />
+
+    <LinearLayout
+        android:id="@+id/ll_key"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginRight="35dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc">
+
+        <TextView
+            android:id="@+id/edPwdKey1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/edPwdKey2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/edPwdKey3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/edPwdKey4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/edPwdKey5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/edPwdKey6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="●"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/ll_key"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ll_key"
+        app:layout_constraintTop_toBottomOf="@+id/ll_key">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="@dimen/width_10dp"
+            android:layout_weight="1"
+            android:background="@color/color_333333" />
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/width_10dp"
+            android:layout_weight="1"
+            android:background="@color/color_D0D0D0" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/width_10dp"
+            android:layout_weight="1"
+            android:background="@color/color_D0D0D0" />
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/width_10dp"
+            android:layout_weight="1"
+            android:background="@color/color_D0D0D0" />
+
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/width_10dp"
+            android:layout_weight="1"
+            android:background="@color/color_D0D0D0" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="42dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="@dimen/width_40dp"
+            android:layout_weight="1"
+            android:background="@color/color_D0D0D0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:text="请设置6位支付密码"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_27sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTitle" />
+
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDesc"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="请牢记您的支付密码"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="@+id/tvDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+
+    <TextView
+        android:id="@+id/tvForgetPayPsw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="35dp"
+        android:text="忘记密码"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/size_14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

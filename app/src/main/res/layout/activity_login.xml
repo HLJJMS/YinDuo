@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <com.yinduowang.installment.app.widget.AutomaticIntervalEditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="@dimen/width_20dp"
+        android:background="@null"
+        android:hint="请输入注册手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_D0D0D0"
+        android:textSize="@dimen/size_17sp"
+        app:interval_location="3,8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <EditText
+        android:id="@+id/etDeliveryPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:background="@null"
+        android:hint="请输入短信验证码"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColorHint="@color/color_D0D0D0"
+        android:textSize="@dimen/size_17sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_verfy_code"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_verify"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <ImageView
+        android:id="@+id/iv_psw_clear"
+        android:layout_width="@dimen/width_15dp"
+        android:layout_height="@dimen/width_15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@mipmap/ic_clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/etDeliveryPhone"
+        app:layout_constraintEnd_toStartOf="@+id/iv_psw_eye"
+        app:layout_constraintTop_toTopOf="@+id/etDeliveryPhone" />
+
+
+    <ImageView
+        android:id="@+id/iv_psw_eye"
+        android:layout_width="20dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/ic_eye_close"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/etDeliveryPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etDeliveryPhone" />
+
+    <ImageView
+        android:id="@+id/iv_phone_clear"
+        android:layout_width="@dimen/width_15dp"
+        android:layout_height="@dimen/width_15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:src="@mipmap/ic_clear"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="欢迎登录小银号"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titlebar" />
+
+    <TextView
+        android:id="@+id/tv_psw_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="密码登录"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_D0D0D0"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv_verfy_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/width_20dp"
+        android:paddingTop="@dimen/width_15dp"
+        android:paddingRight="@dimen/width_20dp"
+        android:paddingBottom="@dimen/width_15dp"
+        android:text="获取验证码"
+        android:textColor="@color/color_FF7213"
+        android:textSize="@dimen/size_15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/etDeliveryPhone"
+        app:layout_constraintEnd_toStartOf="@+id/iv_psw_clear"
+        app:layout_constraintTop_toTopOf="@+id/etDeliveryPhone"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/tvBtn"
+        style="@style/text_submit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:enabled="false"
+        android:text="登录"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_psw_login" />
+
+    <TextView
+        android:id="@+id/tv_version_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/color_C7C7C7"
+        android:textSize="@dimen/size_13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_forget_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="忘记密码"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_psw_login" />
+
+    <TextView
+        android:id="@+id/tv_title_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="手机号码"
+        android:textColor="@color/color_ADADAD"
+        android:visibility="gone"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_phone_number"
+        app:layout_constraintStart_toStartOf="@+id/et_phone_number" />
+
+    <TextView
+        android:id="@+id/tv_title_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="验证码"
+        android:textColor="@color/color_ADADAD"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintBottom_toTopOf="@+id/etDeliveryPhone"
+        app:layout_constraintStart_toStartOf="@+id/view4" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etDeliveryPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etDeliveryPhone" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone_number" />
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_22dp"
+        android:text="登录遇到问题？点击"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCustomerService"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBtn" />
+
+    <TextView
+        android:id="@+id/tvCustomerService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_22dp"
+        android:text="联系客服"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

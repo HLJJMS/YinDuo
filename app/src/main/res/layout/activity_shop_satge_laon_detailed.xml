@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:ignore="MissingConstraints">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/title_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="借款金额(元)"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_xml" />
+
+
+    <TextView
+        android:id="@+id/rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title1" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_xml" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rmb" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="31dp"
+        android:background="@color/color_F6F6F6"
+        app:layout_constraintTop_toBottomOf="@id/detail" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="15dp"
+        android:text="商品名称"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+    <TextView
+        android:id="@+id/name_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="20dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="14dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name" />
+
+    <TextView
+
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="17dp"
+        android:text="支付方式"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/name_txt" />
+
+    <TextView
+        android:id="@+id/pay_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="end"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="17dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/pay"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pay" />
+
+    <TextView
+
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="17dp"
+        android:text="交易时间"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/pay_txt" />
+
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="end"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="17dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/time" />
+
+    <TextView
+        android:id="@+id/market"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="17dp"
+        android:text="订单编号"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/time_txt" />
+
+    <TextView
+        android:id="@+id/market_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="17dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/market"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/market" />
+
+
+    <TextView
+        android:id="@+id/tvAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="17dp"
+        android:text="协议说明"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/market_txt" />
+
+    <TextView
+        android:id="@+id/tvAgreement_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:paddingTop="15dp"
+        android:paddingEnd="18dp"
+        android:paddingStart="13dp"
+        android:paddingBottom="28dp"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/color_365AF7"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/tvAgreement"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAgreement" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_F6F6F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAgreement_txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

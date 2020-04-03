@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.yinduowang.installment.app.widget.TitleBar>
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@mipmap/ic_bank_doing_false" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="39dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar2"
+        app:srcCompat="@mipmap/ic_bank_doing_true" />
+
+    <TextView
+        android:id="@+id/tvTitleone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="27dp"
+        android:text="支付成功，您的还款申请已提交"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/tvRepayRmb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/size_13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleone"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleone"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleone" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="120dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="预计额度和账单状态在10~15分钟更新，请稍后查看"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/size_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvRepayRmb"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        style="@style/text_submit"
+        android:layout_height="@dimen/width_45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/groupBank"
+        app:constraint_referenced_ids="imageView19,imageView15,tvDetail,tvRepayRmb,view,tvTitleone,tvConfirm" />
+
+
+    <ImageView
+
+        android:id="@+id/imgResult"
+        android:layout_width="93dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="39dp"
+        android:src="@mipmap/ic_pay_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvPayResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="还款成功"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/size_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgResult" />
+
+    <TextView
+        android:id="@+id/tvPayOk"
+        style="@style/text_submit"
+        android:layout_height="@dimen/width_45dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="47dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPayResultTxt" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="imgResult,tvPayResultTxt,tvPayOk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

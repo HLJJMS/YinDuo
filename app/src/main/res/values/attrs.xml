@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PwdInputController">
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="inputCount" format="integer"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+    <attr name="numberPickerStyle" format="reference" />
+    <!--qmui-->
+    <attr name="app_primary_color" format="color"/> <!-- topbar -->
+    <attr name="app_content_bg_color" format="color"/> <!-- content-->
+
+    <declare-styleable name="AutomaticIntervalEditText">
+        <attr name="interval_location" format="string"/>
+        <attr name="space_mark" format="string"/>
+    </declare-styleable>
+</resources>

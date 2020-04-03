@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_10dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@mipmap/bg_vip_top"
+                    android:scaleType="fitXY"
+                    app:layout_constraintDimensionRatio="375:138"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/width_25dp"
+                android:text="# 您可畅享以下服务 #"
+                android:textColor="@color/color_8f8f8f"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_25dp"
+                android:layout_marginBottom="@dimen/width_32dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/width_25dp"
+                    android:layout_height="@dimen/width_25dp"
+                    android:background="@mipmap/ic_vip_shopping" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="@dimen/width_35dp"
+                    android:text="商城分期购物"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_25dp"
+                    android:layout_height="@dimen/width_25dp"
+                    android:background="@mipmap/ic_vip_loan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="无抵押消费借款"
+                    android:textStyle="bold"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clVip"
+                android:layout_width="match_parent"
+                android:layout_height="273dp"
+                android:layout_marginStart="@dimen/width_6dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="@dimen/width_6dp"
+                android:background="@mipmap/bg_vip_center">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_34dp"
+                    android:src="@mipmap/ic_vip_details"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvViewHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_18dp"
+                    android:textColor="#ff444444"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView20"
+                    tools:text="自您注册日期起，已赠送您3个月的VIP服务" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/width_58dp"
+                    android:layout_marginTop="@dimen/width_42dp"
+                    android:layout_marginBottom="@dimen/width_53dp"
+                    android:src="@mipmap/ic_vip_ellipse"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvViewHint"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="VIP通道"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView8"
+                    app:layout_constraintStart_toEndOf="@+id/imageView24"
+                    app:layout_constraintTop_toTopOf="@+id/imageView24" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="4dp"
+                    android:text="借款极速审批"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+                    app:layout_constraintStart_toEndOf="@+id/imageView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/width_58dp"
+                    android:layout_marginBottom="@dimen/width_64dp"
+                    android:src="@mipmap/ic_vip_ellipse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView24"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="7x24小时"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView10"
+                    app:layout_constraintStart_toEndOf="@+id/imageView25"
+                    app:layout_constraintTop_toTopOf="@+id/imageView25" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="4dp"
+                    android:text="极速放款到账"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView25"
+                    app:layout_constraintStart_toEndOf="@+id/imageView25"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="204dp"
+                    android:layout_marginTop="@dimen/width_42dp"
+                    android:layout_marginEnd="151dp"
+                    android:layout_marginBottom="@dimen/width_53dp"
+                    android:src="@mipmap/ic_vip_ellipse"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView27"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvViewHint"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="专属服务"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView12"
+                    app:layout_constraintStart_toEndOf="@+id/imageView26"
+                    app:layout_constraintTop_toTopOf="@+id/imageView26" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="4dp"
+                    android:text="提高通过率"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+                    app:layout_constraintStart_toEndOf="@+id/imageView26"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="204dp"
+                    android:layout_marginEnd="151dp"
+                    android:layout_marginBottom="@dimen/width_64dp"
+                    android:src="@mipmap/ic_vip_ellipse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView26"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="提前结清"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView14"
+                    app:layout_constraintStart_toEndOf="@+id/imageView27"
+                    app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="4dp"
+                    android:text="不收取手续费"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+                    app:layout_constraintStart_toEndOf="@+id/imageView27"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+                android:layout_marginStart="@dimen/width_6dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="@dimen/width_6dp"
+                android:background="@mipmap/bg_vip_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_36dp"
+                    android:text="简单三步 消费无忧"
+                    android:textColor="#ff444444"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/shape_circle_vip_blue_gray"
+                    app:layout_constraintStart_toStartOf="@+id/textView71"
+                    app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:layout_marginStart="@dimen/width_51dp"
+                    android:background="@drawable/shape_circle_vip_blue"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/color_365AF7"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/shape_circle_vip_blue_gray"
+                    app:layout_constraintStart_toStartOf="@+id/textView72"
+                    app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                <TextView
+                    android:id="@+id/textView72"
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:background="@drawable/shape_circle_vip_blue"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/color_365AF7"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/shape_circle_vip_blue_gray"
+                    app:layout_constraintStart_toStartOf="@+id/textView73"
+                    app:layout_constraintTop_toTopOf="@+id/textView73" />
+
+                <TextView
+                    android:id="@+id/textView73"
+                    android:layout_width="@dimen/width_24dp"
+                    android:layout_height="@dimen/width_24dp"
+                    android:layout_marginEnd="@dimen/width_51dp"
+                    android:background="@drawable/shape_circle_vip_blue"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/color_365AF7"
+                    android:textSize="@dimen/size_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/width_10dp"
+                    android:layout_marginEnd="@dimen/width_10dp"
+                    android:background="@color/color_EAEDF3"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView72"
+                    app:layout_constraintEnd_toStartOf="@+id/textView72"
+                    app:layout_constraintStart_toEndOf="@+id/textView71"
+                    app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="@dimen/width_10dp"
+                    android:layout_marginEnd="@dimen/width_10dp"
+                    android:background="@color/color_EAEDF3"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView72"
+                    app:layout_constraintEnd_toStartOf="@+id/textView73"
+                    app:layout_constraintStart_toEndOf="@+id/textView72"
+                    app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="30秒"
+                    android:textColor="#ffaaaaaa"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="@+id/view4"
+                    app:layout_constraintStart_toStartOf="@+id/view4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="3分钟"
+                    android:textColor="#ffaaaaaa"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@+id/view5"
+                    app:layout_constraintEnd_toEndOf="@+id/view5"
+                    app:layout_constraintStart_toStartOf="@+id/view5" />
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="轻松认证"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView71"
+                    app:layout_constraintStart_toStartOf="@+id/textView71"
+                    app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_5dp"
+                    android:text="线上可申请\n无抵押认证"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView61"
+                    app:layout_constraintStart_toStartOf="@+id/textView61"
+                    app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="获取额度"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView72"
+                    app:layout_constraintStart_toStartOf="@+id/textView72"
+                    app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_5dp"
+                    android:text="大数据审核\n额度轻松得"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView62"
+                    app:layout_constraintStart_toStartOf="@+id/textView62"
+                    app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="一键消费"
+                    android:textColor="#ff444444"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView73"
+                    app:layout_constraintStart_toStartOf="@+id/textView73"
+                    app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_5dp"
+                    android:text="购买或提现\n一站式服务"
+                    android:textColor="#ff8f8f8f"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView63"
+                    app:layout_constraintStart_toStartOf="@+id/textView63"
+                    app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

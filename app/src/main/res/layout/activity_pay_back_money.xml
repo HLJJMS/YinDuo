@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_F6F6F6"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/tvTotalC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="19dp"
+                android:text="还款总额"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="1dp"
+                android:text="0.00"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_17sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTotalC"
+                app:layout_constraintEnd_toStartOf="@+id/tvTotalCountsUnit"
+                app:layout_constraintTop_toTopOf="@+id/tvTotalC" />
+
+
+            <TextView
+                android:id="@+id/tvTotalCountsUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/width_17dp"
+                android:text="元"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTotalCounts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTotalCounts" />
+
+            <View
+                android:id="@+id/view20"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/color_F6F6F6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTotalC" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/view21"
+                app:layout_constraintTop_toBottomOf="@id/view20" />
+
+            <View
+                android:id="@+id/view21"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:background="@color/color_F6F6F6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rec" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constChoseBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view21">
+
+                <TextView
+                    android:id="@+id/textView223"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/width_17dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="还款方式"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBankStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请添加银行卡"
+                    android:padding="@dimen/width_8dp"
+                    android:textColor="@color/color_ADADAD"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView223"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView21"
+                    app:layout_constraintTop_toTopOf="@+id/textView223" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="@dimen/width_8dp"
+                    android:layout_height="@dimen/width_12dp"
+                    android:layout_marginRight="@dimen/width_17dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBankStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvBankStyle"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvConfirmApply"
+            style="@style/text_submit"
+            android:layout_height="@dimen/width_45dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/width_17dp"
+            android:layout_marginTop="@dimen/width_30dp"
+            android:layout_marginRight="@dimen/width_17dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_18dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="如还款后账户仍有欠款，仍需在最近一个还款日进行还款"
+            android:textColor="@color/color_ADADAD"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

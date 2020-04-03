@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_order_item_bg">
+    <TextView
+        android:id="@+id/tv_order_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="13dp"
+        android:text="2017-06-24 12:23:36"
+        android:textStyle="bold"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="待付款"
+        android:textSize="@dimen/size_13sp"
+        android:textColor="@color/color_FF7213"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_order_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_order_time" />
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="@dimen/width_89dp"
+        android:layout_height="@dimen/width_89dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_order_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order_time"
+        app:srcCompat="@mipmap/bg_empty" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="24dp"
+        android:text="夏季男鞋ins火爆款式白火爆款式"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumb"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumb" />
+
+    <TextView
+        android:id="@+id/tv_av_names"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="黑色 L"
+        android:textSize="@dimen/size_12sp"
+        android:textColor="@color/color_9A9A9A"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单价："
+        android:textSize="12.5sp"
+        android:textColor="@color/color_9A9A9A"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_thumb"
+        app:layout_constraintStart_toStartOf="@+id/tv_av_names" />
+
+    <TextView
+        android:id="@+id/tv_total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="15dp"
+        android:text="合计：¥338.00"
+        android:textColor="@color/color_333333"
+        android:textStyle="bold"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_thumb"
+        app:layout_constraintTop_toBottomOf="@+id/iv_thumb" />
+
+    <TextView
+        android:id="@+id/tv_cancle_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_corners"
+        android:paddingLeft="@dimen/width_12dp"
+        android:paddingTop="@dimen/width_6dp"
+        android:paddingRight="@dimen/width_12dp"
+        android:paddingBottom="@dimen/width_6dp"
+        android:text="取消订单"
+        android:textColor="@color/color_9A9A9A"
+        android:textSize="@dimen/size_13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_confirm_pay"
+        app:layout_constraintEnd_toStartOf="@+id/tv_confirm_pay"
+        app:layout_constraintTop_toTopOf="@+id/tv_confirm_pay" />
+
+    <TextView
+        android:id="@+id/tv_confirm_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/selector_text_submit_btn"
+        android:paddingLeft="@dimen/width_12dp"
+        android:paddingTop="@dimen/width_6dp"
+        android:paddingRight="@dimen/width_12dp"
+        android:paddingBottom="@dimen/width_6dp"
+        android:text="立即付款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_money" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="38.00元"
+        android:textSize="12.5sp"
+        android:textColor="@color/color_333333"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintStart_toEndOf="@+id/textView46"
+        app:layout_constraintTop_toTopOf="@+id/textView46" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="件数："
+        android:textSize="12.5sp"
+        android:textColor="@color/color_9A9A9A"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+        app:layout_constraintStart_toEndOf="@+id/tv_price"
+        app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+    <TextView
+        android:id="@+id/tv_counts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="12.5sp"
+        android:textColor="@color/color_333333"
+        app:layout_constraintBottom_toBottomOf="@+id/textView52"
+        app:layout_constraintStart_toEndOf="@+id/textView52"
+        app:layout_constraintTop_toTopOf="@+id/textView52" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

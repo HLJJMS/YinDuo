@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints">
+
+
+    <TextView
+        android:id="@+id/tvRmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="16dp"
+
+        android:textColor="@color/color_333333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+
+        android:textColor="@color/color_D0D0D0"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/tvRmb"
+        app:layout_constraintTop_toBottomOf="@id/tvRmb" />
+
+    <ImageView
+        android:id="@+id/vTriangle"
+        android:layout_width="4dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="16dp"
+        android:src="@mipmap/ic_slices_gray_close"
+        android:tag="noshow"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="1dp"
+
+        android:textColor="@color/color_D0D0D0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvType" />
+
+    <TextView
+        android:id="@+id/tvMolecule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="1"
+        android:textColor="@color/color_D0D0D0"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvRmb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvRmb" />
+
+    <TextView
+        android:id="@+id/tvGang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textColor="@color/color_D0D0D0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvRmb"
+        app:layout_constraintStart_toEndOf="@id/tvMolecule"
+        app:layout_constraintTop_toTopOf="@id/tvRmb" />
+
+    <TextView
+        android:id="@+id/tvDenominator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+
+        android:textColor="@color/color_D0D0D0"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvRmb"
+        app:layout_constraintStart_toEndOf="@id/tvGang" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvType" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="本期本金"
+        android:textColor="#adadad"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvMoneyTxt" />
+
+    <TextView
+        android:id="@+id/tvMoneyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvProfit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="本期利息"
+        android:textColor="#adadad"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvProfitTxt" />
+
+    <TextView
+        android:id="@+id/tvProfitTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMoneyTxt"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:text="服务费"
+        android:textColor="#adadad"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvServiceTxt"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvServiceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProfitTxt"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvOutnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:paddingBottom="11dp"
+        android:text="逾期费"
+        android:textColor="#adadad"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvOutnumberTxt"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvOutnumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvServiceTxt" />
+
+    <TextView
+        android:id="@+id/tvBaoFei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:paddingBottom="11dp"
+        android:text="保费"
+        android:textColor="#adadad"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvBaoFeiTxt" />
+
+    <TextView
+        android:id="@+id/tvBaoFeiTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOutnumberTxt" />
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvRmb"
+        app:layout_constraintStart_toStartOf="@id/tvMolecule" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_15dp"
+        android:layout_marginTop="@dimen/width_22dp"
+        android:text="发现"
+        android:textColor="@color/color_333333"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_title_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_15dp"
+        android:layout_marginBottom="@dimen/width_22dp"
+        android:text="2019年01月07日"
+        android:textColor="#8F8F8F"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_15dp"
+        android:layout_marginEnd="@dimen/width_15dp">
+
+
+        <ImageView
+            android:id="@+id/ivHelp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/bg_help"
+            app:layout_constraintDimensionRatio="330:140"
+            app:layout_constraintEnd_toStartOf="@+id/ivKefu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivKefu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@mipmap/bg_kefu"
+            app:layout_constraintDimensionRatio="330:140"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivHelp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热点聚焦"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小银号动态 新鲜资讯"
+            android:textColor="#8F8F8F"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

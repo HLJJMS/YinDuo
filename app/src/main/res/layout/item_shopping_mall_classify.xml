@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="13dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivOne"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="@dimen/width_16dp"
+        android:background="@drawable/shape_circle_gray"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_more" />
+
+    <TextView
+        android:id="@+id/tvOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_9dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivOne"
+        app:layout_constraintStart_toStartOf="@+id/ivOne"
+        app:layout_constraintTop_toBottomOf="@+id/ivOne"
+        tools:text="女士外套" />
+
+    <View
+        android:id="@+id/vOne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOne"
+        app:layout_constraintEnd_toEndOf="@+id/ivOne"
+        app:layout_constraintStart_toStartOf="@+id/ivOne"
+        app:layout_constraintTop_toTopOf="@+id/ivOne" />
+
+    <ImageView
+        android:id="@+id/ivTwo"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shape_circle_gray"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/ivThree"
+        app:layout_constraintStart_toEndOf="@+id/ivOne"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_more" />
+
+    <TextView
+        android:id="@+id/tvTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_9dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivTwo"
+        app:layout_constraintStart_toStartOf="@+id/ivTwo"
+        app:layout_constraintTop_toBottomOf="@+id/ivTwo"
+        tools:text="礼品箱包" />
+
+    <View
+        android:id="@+id/vTwo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTwo"
+        app:layout_constraintEnd_toEndOf="@+id/ivTwo"
+        app:layout_constraintStart_toStartOf="@+id/ivTwo"
+        app:layout_constraintTop_toTopOf="@+id/ivTwo" />
+
+    <ImageView
+        android:id="@+id/ivThree"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shape_circle_gray"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_more" />
+
+    <TextView
+        android:id="@+id/tvThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_9dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivThree"
+        app:layout_constraintTop_toBottomOf="@+id/ivThree"
+        tools:text="家用电器" />
+
+    <View
+        android:id="@+id/vThree"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvThree"
+        app:layout_constraintEnd_toEndOf="@+id/ivThree"
+        app:layout_constraintStart_toStartOf="@+id/ivThree"
+        app:layout_constraintTop_toTopOf="@+id/ivThree" />
+
+    <ImageView
+        android:id="@+id/ivFour"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shape_circle_gray"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/ivMore"
+        app:layout_constraintStart_toEndOf="@+id/ivThree"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_more" />
+
+    <TextView
+        android:id="@+id/tvFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_9dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivFour"
+        app:layout_constraintStart_toStartOf="@+id/ivFour"
+        app:layout_constraintTop_toBottomOf="@+id/ivFour"
+        tools:text="美妆护理" />
+
+    <View
+        android:id="@+id/vFour"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFour"
+        app:layout_constraintEnd_toEndOf="@+id/ivFour"
+        app:layout_constraintStart_toStartOf="@+id/ivFour"
+        app:layout_constraintTop_toTopOf="@+id/ivFour" />
+
+    <ImageView
+        android:id="@+id/ivMore"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="@dimen/width_16dp"
+        android:src="@mipmap/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_9dp"
+        android:text="更多"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_12sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMore"
+        app:layout_constraintStart_toStartOf="@+id/ivMore"
+        app:layout_constraintTop_toBottomOf="@+id/ivMore" />
+
+    <View
+        android:id="@+id/vMore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMore"
+        app:layout_constraintEnd_toEndOf="@+id/ivMore"
+        app:layout_constraintStart_toStartOf="@+id/ivMore"
+        app:layout_constraintTop_toTopOf="@+id/ivMore" />
+</androidx.constraintlayout.widget.ConstraintLayout>

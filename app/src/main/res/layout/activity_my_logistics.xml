@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qmuiteam.qmui.layout.QMUIFrameLayout
+        android:id="@+id/v_bg"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/bg_logistics"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <ImageView
+            android:layout_width="77dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="9dp"
+            android:src="@mipmap/ic_logistics_car"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="97dp"
+            android:layout_marginTop="25dp"
+            android:text="物流公司：暂无"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="97dp"
+            android:gravity="bottom"
+            android:paddingBottom="25dp"
+            android:text="物流单号：暂无"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </com.qmuiteam.qmui.layout.QMUIFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintTop_toBottomOf="@id/v_bg"></androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

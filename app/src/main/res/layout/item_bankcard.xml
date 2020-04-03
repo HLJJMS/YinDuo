@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llContentOne"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/bg_bankcard_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvNameOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_36dp"
+            android:layout_marginEnd="@dimen/width_36dp"
+            android:layout_marginBottom="@dimen/width_13dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15sp"
+            tools:text="农业银行" />
+
+        <TextView
+            android:id="@+id/tvCardOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_22sp"
+            tools:text="6221   ****   ****   7500" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContentOther"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/bg_bankcard_gray"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/width_17dp">
+
+        <TextView
+            android:id="@+id/tv_pay_back_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_36dp"
+            android:layout_marginEnd="@dimen/width_36dp"
+            android:layout_marginBottom="@dimen/width_13dp"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_15sp"
+            tools:text="农业银行" />
+
+        <TextView
+            android:id="@+id/tvCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_22sp"
+            tools:text="6221   ****   ****   7500" />
+
+    </LinearLayout>
+</FrameLayout>

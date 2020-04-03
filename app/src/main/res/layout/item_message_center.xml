@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/color_F6F6F6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_15dp"
+        android:background="@drawable/shape_message_center_time_bg"
+        android:paddingLeft="@dimen/width_8dp"
+        android:paddingTop="@dimen/width_2dp"
+        android:paddingRight="@dimen/width_8dp"
+        android:paddingBottom="@dimen/width_2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_12sp"
+        tools:text="2019-04-08 9:14:25" />
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/width_15dp"
+        android:layout_marginTop="@dimen/width_15dp"
+        android:layout_marginRight="@dimen/width_15dp"
+        android:layout_marginBottom="@dimen/width_10dp"
+        android:background="@drawable/shape_message_center_message_bg"
+        android:padding="@dimen/width_15dp"
+        tools:text="这里是消息内容这里是消息内容这里是消息内容，超出一行折行显示" />
+
+
+</LinearLayout>

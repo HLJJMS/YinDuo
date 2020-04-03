@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/width_15dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="@dimen/width_15dp">
+
+    <View
+        android:id="@+id/vStart"
+        android:layout_width="@dimen/width_5dp"
+        android:layout_height="@dimen/width_10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:id="@+id/qmuiLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/vStart"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivHotGoods"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:scaleType="fitXY" />
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    <View
+        android:id="@+id/vEnd"
+        android:layout_width="@dimen/width_9dp"
+        android:layout_height="@dimen/width_10dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/qmuiLinearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_10dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/qmuiLinearLayout"
+        app:layout_constraintStart_toEndOf="@+id/vStart"
+        app:layout_constraintTop_toBottomOf="@+id/qmuiLinearLayout"
+        tools:text="商品名称" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_12dp"
+        android:text="¥"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/vStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_1dp"
+        android:textColor="#ff444444"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView30"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toTopOf="@+id/textView30"
+        tools:text="139.56" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/width_5dp"
+        android:text="¥"
+        android:textColor="#ffff3763"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/vStart"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/tvTerminally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_1dp"
+        android:textColor="#ffff3763"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView37"
+        app:layout_constraintStart_toEndOf="@+id/textView37"
+        app:layout_constraintTop_toTopOf="@+id/textView37"
+        tools:text="3.50" />
+
+    <TextView
+        android:id="@+id/tvPeriods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff666666"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTerminally"
+        app:layout_constraintStart_toEndOf="@+id/tvTerminally"
+        tools:text="×24期" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

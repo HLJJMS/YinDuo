@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/titleBar"
+        android:layout_above="@+id/llBottom"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.qmuiteam.qmui.widget.QMUIObservableScrollView
+            android:id="@+id/qmuiObservableScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/width_17dp"
+                    android:layout_marginTop="@dimen/width_14dp"
+                    android:textStyle="bold"
+                    android:text="@string/authentication_center"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/width_17dp"
+                    android:layout_marginTop="@dimen/width_5dp"
+                    android:text="@string/basic_certification_must_be_completed"
+                    android:textColor="#ff9a9a9a"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/qmuiFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="@dimen/width_2dp"
+                    android:layout_marginTop="@dimen/width_12dp"
+                    android:layout_marginEnd="@dimen/width_2dp"
+                    android:background="@mipmap/bg_authentication_center_top"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_35dp"
+                        android:layout_marginBottom="@dimen/width_8dp"
+                        android:text="@string/credit_line"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvQuota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_35dp"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:text="@string/complete_certification" />
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_70dp">
+
+                    <TextView
+                        android:id="@+id/textView191"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:layout_marginBottom="@dimen/width_3dp"
+                        android:text="@string/personal_information"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView201"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/textView201"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:text="@string/please_ensure_that_the_information"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView191"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/to_be_certified"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView201"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView131"
+                        app:layout_constraintTop_toTopOf="@+id/textView191" />
+
+                    <ImageView
+                        android:id="@+id/imageView131"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_chevron_right_two"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView201"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView191" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_x5dp"
+                    android:layout_marginLeft="@dimen/width_17dp"
+                    android:layout_marginRight="@dimen/width_17dp"
+                    android:background="@color/color_EAEAEA" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBankCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_70dp">
+
+                    <TextView
+                        android:id="@+id/textView192"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:layout_marginBottom="@dimen/width_3dp"
+                        android:text="@string/bank_certification"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView202"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/textView202"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:text="@string/make_sure_that_the_bank_card_information_is_correct"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView192"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvBankCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/to_be_certified"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView202"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView132"
+                        app:layout_constraintTop_toTopOf="@+id/textView192" />
+
+                    <ImageView
+                        android:id="@+id/imageView132"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_chevron_right_two"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView202"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView192" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_x5dp"
+                    android:layout_marginLeft="@dimen/width_17dp"
+                    android:layout_marginRight="@dimen/width_17dp"
+                    android:background="@color/color_EAEAEA" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clEmergencyContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_70dp">
+
+                    <TextView
+                        android:id="@+id/textView193"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:layout_marginBottom="@dimen/width_3dp"
+                        android:text="@string/emergency_contact"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView203"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/textView203"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:text="@string/special_circumstances_can_help_us_to_contact_you"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView193"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvEmergencyContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/to_be_certified"
+
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView203"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView133"
+                        app:layout_constraintTop_toTopOf="@+id/textView193" />
+
+                    <ImageView
+                        android:id="@+id/imageView133"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_chevron_right_two"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView203"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView193" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_x5dp"
+                    android:layout_marginLeft="@dimen/width_17dp"
+                    android:layout_marginRight="@dimen/width_17dp"
+                    android:background="@color/color_EAEAEA" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clPhone"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_70dp">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:layout_marginBottom="@dimen/width_3dp"
+                        android:text="@string/mobile_operators"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView20"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/width_17dp"
+                        android:text="@string/accelerate_audit_speed_after_certification_is_completed"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/tvPayBackMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/to_be_certified"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_cancle_chose"
+                        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+                    <ImageView
+                        android:id="@+id/iv_cancle_chose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_chevron_right_two"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/width_x5dp"
+                    android:layout_marginLeft="@dimen/width_17dp"
+                    android:layout_marginRight="@dimen/width_17dp"
+                    android:background="@color/color_EAEAEA" />
+
+
+            </LinearLayout>
+
+        </com.qmuiteam.qmui.widget.QMUIObservableScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/ivCheckDefault"
+            android:layout_width="@dimen/width_17dp"
+            android:layout_height="@dimen/width_17dp"
+            android:layout_marginStart="@dimen/width_18dp"
+            android:layout_marginTop="@dimen/width_21dp"
+            android:background="@drawable/selector_my_checkbox"
+            android:button="@null"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/view11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="同意"
+            android:textSize="@dimen/size_12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheckDefault"
+            app:layout_constraintStart_toEndOf="@+id/ivCheckDefault"
+            app:layout_constraintTop_toTopOf="@+id/ivCheckDefault" />
+
+        <com.qmuiteam.qmui.widget.textview.QMUILinkTextView
+            android:id="@+id/tvAgreement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_5dp"
+            android:layout_marginEnd="@dimen/width_18dp"
+            android:textSize="@dimen/size_12sp"
+            android:textColor="@color/color_9A9A9A"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivCheckDefault"
+            app:layout_constraintTop_toTopOf="@+id/view11"
+            app:qmui_linkTextColor="@color/colorAccent"
+            tools:text="同意《电子签章及存证授权委托书》《征信查询授权书》《个人信息使用和第三方机构数据查询授权书》" />
+
+        <TextView
+            android:id="@+id/tvBtn"
+            style="@style/text_submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/width_20dp"
+            android:layout_marginTop="@dimen/width_30dp"
+            android:layout_marginEnd="@dimen/width_20dp"
+            android:enabled="false"
+            android:text="@string/view_quotas"
+            android:textSize="@dimen/size_16sp"
+            app:layout_constraintBottom_toTopOf="@+id/vv"
+            app:layout_constraintTop_toBottomOf="@+id/tvAgreement" />
+
+        <View
+            android:id="@+id/vv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

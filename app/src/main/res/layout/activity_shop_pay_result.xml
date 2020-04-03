@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBarPayResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/tvResult"
+        app:layout_constraintStart_toEndOf="@id/ivNike" />
+
+    <ImageView
+        android:id="@+id/ivNike"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="29dp"
+        android:src="@mipmap/ic_nike_green"
+        app:layout_constraintEnd_toStartOf="@id/tvResult"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBarPayResult" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/color_333333"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivNike"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivNike"
+        app:layout_constraintTop_toTopOf="@id/ivNike" />
+
+
+    <TextView
+        android:id="@+id/tvRmbIc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="¥"
+        android:textColor="@color/color_333333"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvRmb"
+        app:layout_constraintEnd_toStartOf="@id/tvRmb"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvRmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="23dp"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="39sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvRmbIc"
+        app:layout_constraintTop_toBottomOf="@id/ivNike" />
+
+
+    <TextView
+        android:id="@+id/tvPayTypeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="授信额度支付"
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRmb" />
+
+    <TextView
+        android:id="@+id/tvPayTypeSuccessTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="可在我的订单中查看审核记录"
+        android:textColor="@color/color_ADADAD"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPayTypeTxt" />
+
+
+    <TextView
+        android:id="@+id/tvUp"
+        style="@style/text_submit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="13dp"
+        android:enabled="true"
+        android:text="返回商城"
+        android:textSize="@dimen/size_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPayTypeTxt" />
+
+    <TextView
+        android:id="@+id/tvDown"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_payment_periods_select"
+        android:gravity="center"
+        android:text="查看订单"
+        android:textColor="@color/color_365AF7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tvUp"
+        app:layout_constraintStart_toStartOf="@id/tvUp"
+        app:layout_constraintTop_toBottomOf="@id/tvUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

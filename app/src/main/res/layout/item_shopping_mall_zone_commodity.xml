@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:id="@+id/qmuiLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/width_12dp">
+
+            <com.qmuiteam.qmui.layout.QMUILinearLayout
+                android:id="@+id/qmuiCommodity"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="169:169"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivCommodity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+            </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+            <TextView
+                android:id="@+id/tvCommodityName"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/width_45dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="@dimen/width_9dp"
+                android:layout_marginEnd="11dp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/qmuiCommodity"
+                app:layout_constraintStart_toStartOf="@+id/qmuiCommodity"
+                app:layout_constraintTop_toBottomOf="@+id/qmuiCommodity"
+                tools:text="商品名称商品商品名称商" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_11dp"
+                android:text="¥"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/tvCommodityName"
+                app:layout_constraintTop_toBottomOf="@+id/tvCommodityName" />
+
+            <TextView
+                android:id="@+id/tvAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/width_1dp"
+                android:textColor="#ff444444"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7"
+                tools:text="139.56" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="¥"
+                android:textColor="#ffff3763"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/tvTerminally"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/width_1dp"
+                android:textColor="#ffff3763"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                tools:text="3.50" />
+
+            <TextView
+                android:id="@+id/tvPeriods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvTerminally"
+                app:layout_constraintStart_toEndOf="@+id/tvTerminally"
+                tools:text="×24期" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+    <View
+        android:id="@+id/vBottomEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/width_20dp"
+        android:visibility="gone" />
+</LinearLayout>

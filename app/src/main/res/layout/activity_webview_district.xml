@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <ImageView
+            android:id="@+id/ivDistrictBack"
+            android:layout_width="@dimen/width_39dp"
+            android:layout_height="@dimen/width_26dp"
+            android:layout_marginTop="29dp"
+            android:src="@mipmap/ic_webview_back"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivDistrictBack"
+            app:layout_constraintStart_toEndOf="@id/ivDistrictBack"
+            app:layout_constraintTop_toTopOf="@id/ivDistrictBack"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="143dp"
+            android:layout_marginTop="126dp"
+            android:src="@mipmap/ic_web_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_21dp"
+            android:text="加载失败，请稍后再试"
+            android:textColor="@color/color_9A9A9A"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvRetryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_42dp"
+            android:layout_marginLeft="@dimen/width_47dp"
+            android:layout_marginTop="@dimen/width_60dp"
+            android:layout_marginRight="@dimen/width_47dp"
+            android:background="@drawable/shape_bg_webview"
+            android:gravity="center"
+            android:text="重试"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_15sp" />
+
+    </LinearLayout>
+</FrameLayout>

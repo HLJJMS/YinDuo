@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/qmui_topbar_height" />
+    <!--标题-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="112dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="19dp"
+                android:text="请选择投诉类型"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/inputFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/bg_input_feedback"
+                android:gravity="left|top"
+                android:hint="请输入您的投诉内容"
+                android:maxLength="160"
+                android:minHeight="284dp"
+                android:paddingLeft="29dp"
+                android:paddingTop="28dp"
+                android:paddingRight="29dp"
+                android:paddingBottom="76dp"
+                android:textColor="@color/color_666666"
+                android:textColorHint="@color/color_D0D0D0"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tagFlowLayout"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="0"
+                android:textColor="@color/color_D0D0D0"
+                app:layout_constraintBottom_toBottomOf="@+id/inputFeedback"
+                app:layout_constraintEnd_toStartOf="@id/tvNumberTotal" />
+
+            <TextView
+                android:id="@+id/tvNumberTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="24dp"
+                android:text="/160"
+                android:textColor="@color/color_D0D0D0"
+                app:layout_constraintBottom_toBottomOf="@+id/inputFeedback"
+                app:layout_constraintEnd_toEndOf="@+id/inputFeedback" />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                style="@style/text_submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="17dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputFeedback" />
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tagFlowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/width_15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="@dimen/width_15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

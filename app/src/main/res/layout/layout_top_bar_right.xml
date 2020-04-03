@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flRightView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivRightImageButton"
+        android:layout_width="@dimen/width_47dp"
+        android:layout_height="?attr/qmui_topbar_height"
+        android:layout_gravity="right|bottom"
+        android:paddingLeft="@dimen/width_16dp"
+        android:paddingRight="@dimen/width_16dp"
+        android:src="@mipmap/ic_add"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvRightTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/qmui_topbar_height"
+        android:layout_gravity="right|bottom"
+        android:gravity="center"
+        android:paddingLeft="@dimen/width_15dp"
+        android:paddingRight="@dimen/width_15dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_15sp"
+        android:visibility="gone"
+        tools:text="咨询客服" />
+
+</FrameLayout>

@@ -1,0 +1,197 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.yinduowang.installment"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 5
+        versionName "1.2"
+        flavorDimensions "versionCode"
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+        ndk{
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("appkey.jks")
+            storePassword "yinduo123"
+            keyAlias "installment"
+            keyPassword "yinduo123"
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/proguard/okhttp3.pro'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    productFlavors {
+        xiaoyinhao {}
+        huawei {}
+        mi {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // kotlin 注入控件
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    /** support **/
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    /** view **/
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    // 快速列表适配器框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    // 腾讯ui
+    implementation 'com.qmuiteam:qmui:1.4.0'
+    // 滚轮选择器 4.1.8版本 重写了 pickerview_options.xmlons.xml 以便在title下方添加横线
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    // 进度条
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    // 轮播图 banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    // 图片查看器
+    implementation 'com.uwetrottmann.photoview:library:1.2.4'
+    // 防苹果底部弹窗
+    implementation 'com.baoyz.actionsheet:library:1.1.7'
+    // 标签选择器
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
+    // 轮播图 banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    // 腾讯X5内核游览器
+    implementation 'com.tencent.tbs.tbssdk:sdk:43697'
+    //美洽客服
+    implementation 'com.meiqia:meiqiasdk:3.5.8'
+
+    /** tools **/
+    // android通用状态判断
+    implementation 'com.blankj:utilcode:1.22.7'
+    // view绑定
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    kapt('com.jakewharton:butterknife-compiler:10.2.0') {
+        exclude module: 'support-annotations'
+    }
+    // 阿里云 实人认证引入
+    implementation files('libs/okhttp-3.12.0.jar')
+//    implementation files('libs/okio-1.16.0.jar')
+    implementation files('libs/logging-interceptor-3.12.0.jar')
+    implementation files('libs/windvane-min-8.0.3.2.3.jar')
+    implementation(name: 'FaceLivenessOpen-2.1.6.15', ext: 'aar')
+    implementation(name: 'NoCaptchaSDK-external-release-5.4.33', ext: 'aar')
+    implementation(name: 'oss-android-sdk-2.9.2', ext: 'aar')
+    implementation(name: 'rpsdk-3.1.0.1', ext: 'aar')
+    implementation(name: 'SecurityBodySDK-external-release-5.4.79', ext: 'aar')
+    implementation(name: 'SecurityGuardSDK-external-release-5.4.9901', ext: 'aar')
+    configurations {
+        all*.exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
+    // 腾讯Bugly 异常上报 在线更新
+    implementation 'com.tencent.bugly:crashreport_upgrade:1.4.1'
+    implementation 'com.tencent.tinker:tinker-android-lib:1.9.13'
+    //友盟
+    implementation 'com.umeng.umsdk:analytics:8.0.0'
+    implementation 'com.umeng.umsdk:common:2.0.1'
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    implementation 'com.umeng.umsdk:push:5.0.2'
+    // 高德地图
+    implementation 'com.amap.api:location:4.7.0'
+    // 设备指纹
+    implementation files('libs/baiqishi-risk-sdk-2.3.2.jar')
+
+    /** arms **/
+    implementation 'me.jessyan:arms:2.5.1'
+    implementation 'me.jessyan:arms-imageloader-glide:2.5.1'
+    implementation 'me.jessyan:autosize:1.1.2'
+    //首页导航栏动画按钮
+    implementation 'com.airbnb.android:lottie:3.0.6'
+    // 框架包含三方
+    implementation rootProject.ext.dependencies["androideventbus"]
+    kapt rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+    // 图片加载框架
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    /** test **/
+    testImplementation rootProject.ext.dependencies["junit"]
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+// 依赖插件脚本
+apply from: 'tinker-support.gradle'

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--圆角-->
+    <corners
+        android:radius="@dimen/width_6dp"/>
+
+    <!--填充颜色-->
+    <!--<solid android:color="#000"/>-->
+
+    <!--边框-->
+    <!--<stroke-->
+        <!--android:color="#808080"-->
+        <!--android:width="2dp"/>-->
+
+    <!--三色渐变-->
+    <!--<gradient-->
+        <!--android:startColor="#f52"-->
+        <!--android:centerColor="#f92"-->
+        <!--android:endColor="#fe2"-->
+        <!--android:angle="180"/>-->
+
+    <!--两色渐变-->
+    <gradient
+        android:startColor="@color/color_E0E0F3"
+        android:endColor="@color/color_B4B2C0"
+        android:angle="-90"/>
+
+</shape>

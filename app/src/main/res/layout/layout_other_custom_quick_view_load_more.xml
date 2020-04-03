@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/load_more_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_4" />
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text="@string/brvah_loading"
+            android:textColor="@color/color_D0D0D0"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/load_more_load_fail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/color_D0D0D0"
+            android:text="@string/brvah_load_failed" />
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/load_more_load_end_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints">
+
+            <View
+                android:layout_width="2dp"
+                android:background="@drawable/bg_logistice_point_gray"
+                android:layout_height="2dp"
+                app:layout_constraintBottom_toBottomOf="@id/center_messager"
+                app:layout_constraintLeft_toRightOf="@id/left_view"
+                app:layout_constraintTop_toTopOf="@id/center_messager" />
+
+            <View
+                android:id="@+id/left_view"
+                android:layout_width="31dp"
+                android:layout_height="0.5dp"
+                android:layout_marginEnd="11dp"
+                android:background="@color/color_D0D0D0"
+                app:layout_constraintBottom_toBottomOf="@id/center_messager"
+                app:layout_constraintEnd_toStartOf="@id/center_messager"
+                app:layout_constraintTop_toTopOf="@id/center_messager" />
+
+            <TextView
+                android:id="@+id/center_messager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="没有更多消息啦"
+                android:textColor="@color/color_D0D0D0"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_logistice_point_gray"
+                app:layout_constraintBottom_toBottomOf="@id/center_messager"
+                app:layout_constraintEnd_toStartOf="@id/right_view"
+                app:layout_constraintTop_toTopOf="@id/center_messager" />
+
+            <View
+
+                android:id="@+id/right_view"
+                android:layout_width="31dp"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="11dp"
+                android:background="@color/color_D0D0D0"
+                app:layout_constraintBottom_toBottomOf="@id/center_messager"
+                app:layout_constraintStart_toEndOf="@id/center_messager"
+                app:layout_constraintTop_toTopOf="@id/center_messager" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</FrameLayout>
+

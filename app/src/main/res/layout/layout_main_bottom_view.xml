@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_EAEAEA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/llHomeBottomOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHomeBottomOne"
+                android:layout_width="@dimen/width_25dp"
+                android:layout_height="@dimen/width_25dp"
+                android:layout_marginTop="@dimen/width_6dp"
+                android:duplicateParentState="true"
+                android:src="@mipmap/ic_shop" />
+
+            <TextView
+                android:id="@+id/tvHomeBottomOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_2dp"
+                android:layout_marginBottom="@dimen/width_4dp"
+                android:text="商城"
+                android:textColor="@color/color_444444"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHomeBottomTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHomeBottomTwo"
+                android:layout_width="@dimen/width_25dp"
+                android:layout_height="@dimen/width_25dp"
+                android:layout_marginTop="@dimen/width_6dp"
+                android:duplicateParentState="true"
+                android:src="@mipmap/ic_loan_gray" />
+
+            <TextView
+                android:id="@+id/tvHomeBottomTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_2dp"
+                android:layout_marginBottom="@dimen/width_4dp"
+                android:text="借钱"
+
+                android:textColor="@color/color_D0D0D0"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHomeBottomThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivHomeBottomThree"
+                android:layout_width="@dimen/width_25dp"
+                android:layout_height="@dimen/width_25dp"
+                android:layout_marginTop="@dimen/width_6dp"
+                android:src="@mipmap/ic_person_gray" />
+
+            <TextView
+                android:id="@+id/tvHomeBottomThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/width_2dp"
+                android:layout_marginBottom="@dimen/width_4dp"
+                android:text="我的"
+                android:textColor="@color/color_D0D0D0"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

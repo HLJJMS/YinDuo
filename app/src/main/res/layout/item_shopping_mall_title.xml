@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/width_16dp"
+        android:layout_marginTop="@dimen/width_22dp"
+        android:layout_marginBottom="@dimen/width_22dp"
+        android:textColor="@color/color_333333"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        tools:text="商城" />
+
+</LinearLayout>

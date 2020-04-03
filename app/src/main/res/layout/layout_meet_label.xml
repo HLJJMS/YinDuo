@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview_label_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:duplicateParentState="true">
+
+    <TextView
+        android:id="@+id/tv_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/width_25dp"
+        android:background="@drawable/selector_meet_label_enable"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:paddingLeft="9dp"
+        android:paddingTop="@dimen/width_2dp"
+        android:layout_marginEnd="@dimen/width_15dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="@dimen/width_2dp"
+        android:textColor="@drawable/selector_meet_label_enable_str"
+        android:textSize="15sp"
+        tools:text="无法自主还款" />
+</RelativeLayout>
+

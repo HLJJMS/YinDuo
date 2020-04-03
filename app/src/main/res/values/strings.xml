@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY app_name "小银号">]>
+<resources>
+
+    <string name="app_name">&app_name;</string>
+
+    <string name="privacy_policy_content_msg">欢迎使用“小银号”！我们非常重视您的个人信息和隐私保护。在您使用“小银号”服务之前，请务必点击“阅读”查看《隐私保护政策》详细内容，我们将严格按照经您同意的各项条款使用您的个人信息，尽全力保护您的个人信息安全，以便为您提供更好的服务。</string>
+    <string name="privacy_policy">《隐私保护政策》</string>
+
+    <string name="loan">借款</string>
+    <string name="how_long_loan">借多久</string>
+    <string name="usage_of_loan">借款用途</string>
+    <string name="reimbursement">还款</string>
+    <string name="mine">我的</string>
+    <string name="mine_title">个人中心</string>
+    <!--读取联系人提示-->
+    <string name="read_contact_tips">&app_name;会启用你的通讯录!</string>
+    <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+
+    <string name="input_keyboard">&app_name;安全输入</string>
+    <string name="register">我已阅读并同意《&app_name;注册协议》</string>
+
+    <string name="input">&app_name;安全输入</string>
+    <string name="my_order">我的订单</string>
+    <string name="idea_feedback">意见反馈</string>
+    <string name="collection_complain">催收投诉</string>
+    <string name="address_shou">收货地址</string>
+    <string name="change_login_password">修改登录密码</string>
+    <string name="setting_pay_psw">设置支付密码</string>
+    <string name="exit_login">退出登录</string>
+    <!--消息中心-->
+    <string name="message_center">消息中心</string>
+    <string name="loanString">借款</string>
+    <!--首页 借款-->
+    <string name="immediate_application">立即申请</string>
+
+    <!--密码找回-->
+    <string name="complete">完成</string>
+
+    <!--我的-->
+    <string name="top_hiht">尊敬的小银号用户</string>
+    <string name="my_bill">我的账单</string>
+    <string name="mall_to_be_returned_yuan">商城待还(元)</string>
+    <string name="cash_to_be_repaid_yuan">现金待还(元)</string>
+    <string name="payment_on_behalf">待付款</string>
+    <string name="to_be_shipped">待发货</string>
+    <string name="to_be_received">待收货</string>
+    <string name="return_after_sale">退换/售后</string>
+    <string name="full_order">全部订单</string>
+    <string name="please_first_authentication">请您先完成个人认证</string>
+    <string name="cancel">取消</string>
+    <string name="go_authentication">去认证</string>
+
+    <!--银行卡列表-->
+    <string name="bankcard">银行卡</string>
+    <string name="myquota">我的额度</string>
+    <string name="no_bank_card_added_yet">暂未添加银行卡</string>
+    <!--添加银行卡-->
+    <string name="add_bankcard">添加银行卡</string>
+    <string name="please_fill_bankcard_information">请填写银行卡信息</string>
+    <string name="cardholder">持卡人</string>
+    <string name="bankcard_number">银行卡号</string>
+    <string name="phone_number">手机号</string>
+    <string name="verification_code">验证码</string>
+    <string name="please_fill_bankcard_number">请输入银行卡号</string>
+    <string name="please_fill_bankcard_number_two">请输入银行号</string>
+    <string name="please_enter_bank_reserved_cell_phone_number">请输入银行预留手机号</string>
+    <string name="please_fill_verification_code">请输入验证码</string>
+    <string name="click_to_get">点击获取</string>
+    <string name="determine_the_binding_card">确定绑卡</string>
+    <string name="bank_card_number_can_only_be_16_or_19_digits">银行卡号只能为16或19位数字</string>
+    <string name="please_fill_phone_number">请输入手机号码</string>
+    <string name="incorrect_format_of_mobile_phone_number">手机号码格式不正确</string>
+    <string name="please_input_elven_mobile_phone_number">请输入11位手机号码</string>
+
+    <string name="re_acquisition">重新获取</string>
+    <string name="dialogTitleString">请按实际用途选择，\n&app_name;保留核实用途的权利</string>
+
+    <!--认证中心-->
+    <string name="authentication_center">认证中心</string>
+    <string name="basic_certification_must_be_completed">基本认证必填，完成后可查看额度</string>
+    <string name="credit_line">授信额度</string>
+    <string name="complete_certification">完成认证 马上领取额度</string>
+    <string name="please_ensure_that_the_information">请确保填写的信息真实有效</string>
+    <string name="de_certification">去认证</string>
+    <string name="to_be_certified">待认证</string>
+    <string name="certified">已认证</string>
+    <string name="bank_certification">银行认证</string>
+    <string name="make_sure_that_the_bank_card_information_is_correct">请确保银行卡信息准确无误</string>
+    <string name="emergency_contact">紧急联系人</string>
+    <string name="special_circumstances_can_help_us_to_contact_you">特殊情况可帮助我们联系您</string>
+    <string name="mobile_operators">手机运营商</string>
+    <string name="accelerate_audit_speed_after_certification_is_completed">认证完成后可加快审核速度</string>
+    <string name="view_quotas">查看额度</string>
+
+    <!--个人信息-->
+    <string name="emergent">紧急联系人</string>
+    <string name="personal_information">个人信息</string>
+    <string name="pay_back_money">还款金额</string>
+    <string name="pay_back_money_result">还款结果</string>
+    <string name="payment_result">付款结果</string>
+    <string name="payment_type">付款方式</string>
+    <string name="please_make_sure_it_is_correct">身份证信息保存后将无法修改，请务必保证正确</string>
+    <string name="identity_card">身份证照</string>
+    <string name="person_u_face">人脸识别</string>
+    <string name="person_name">姓名</string>
+    <string name="please_fill_name">请输入姓名</string>
+    <string name="person_id">身份证</string>
+    <string name="please_fill_id">请输入身份证号</string>
+    <string name="please_choose">请选择</string>
+    <string name="education">学历</string>
+    <string name="current_address">现居地址</string>
+    <string name="detailed_address">详细地址</string>
+    <string name="detailed_street_and_door_number">详细街道和门牌号</string>
+    <string name="length_of_residence">居住时长（选填）</string>
+    <string name="marital_status">婚姻状况（选填）</string>
+    <string name="save">保存</string>
+    <string name="bank_level_data_encryption_service">银行级数据加密服务</string>
+    <string name="selection_of_areas">选择地区</string>
+    <string name="selection_of_areas_error">获取城市列表失败</string>
+    <string name="selection_of_residence">选择居住时长</string>
+    <string name="selection_of_marital_status">选择婚姻状况</string>
+    <string name="selection_of_education">选择学历</string>
+
+    <!--权限请求 弹窗-->
+    <string name="READ_PHONE_STATE">您的操作需要“电话”权限，请到“设置”给予与应用“电话”权限</string>
+    <string name="CALL_PHONE">您的操作需要“拨打电话”权限，请到“设置”给予与应用“拨打电话”权限</string>
+    <string name="WRITE_EXTERNAL_STORAGE">您的操作需要“读写SD卡”权限，请到“设置”给予应用“读写SD卡”权限</string>
+    <string name="RECORD_AUDIO">您的操作需要“麦克风”权限，请到“设置”给予应用“麦克风”权限</string>
+    <string name="ACCESS_FINE_LOCATION">您的操作需要“位置”权限，请到“设置”给予应用“位置”权限</string>
+    <string name="CAMERA">您的操作需要“相机”权限，请到“设置”给予应用“相机”权限</string>
+    <string name="READ_CONTACTS">您的操作需要“通讯录”权限，请到“设置”给予应用“通讯录”权限</string>
+
+
+
+    <!--签约结果-->
+    <string name="contract_results">签约结果</string>
+    <!--账单明细-->
+    <string name="bill_list_title">账单明细</string>
+    <!--商城相关-->
+    <string name="after_sale_title">退换/售后</string>
+    <string name="confirmation_order">确认订单</string>
+    <string name="please_add_address">请添加收货地址</string>
+    <string name="confirm_receiving_good">确认收货结果</string>
+    <string name="logistics_detail">物流详情</string>
+    <string name="pay_result">付款结果</string>
+    <string name="shop_bill">商城账单</string>
+    <!--手机运营商认证-->
+    <string name="mobile_operator_certification">手机运营商认证</string>
+    <string name="input_password">请输入支付密码</string>
+    <string name="forget_password">忘记密码</string>
+
+
+
+</resources>

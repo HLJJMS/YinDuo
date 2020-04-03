@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/width_227dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_home_loan_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_20dp"
+            android:layout_marginLeft="@dimen/width_20dp"
+            android:layout_marginTop="@dimen/width_46dp"
+            android:text="多易贷"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_4dp"
+            android:text="高    额    低    息          极    速    审    批"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <com.qmuiteam.qmui.layout.QMUIFrameLayout
+            android:id="@+id/qmuiFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_20dp"
+            android:layout_marginTop="@dimen/width_31dp"
+            android:layout_marginEnd="@dimen/width_20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_26dp"
+                    android:text="我要借款"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_pay_back_money"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_pay_back_money"
+                    app:layout_constraintHorizontal_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_pay_back_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="0.00"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <SeekBar
+                    android:id="@+id/select_money_bar"
+                    style="@android:style/Widget.SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:maxHeight="4dp"
+                    android:progressDrawable="@drawable/home_seekbar_bg"
+                    android:splitTrack="false"
+                    android:thumb="@mipmap/icon_select_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_pay_back_money" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/width_20dp"
+                    android:layout_marginTop="@dimen/width_15dp"
+                    android:text="@string/how_long_loan"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/select_money_bar" />
+
+                <TextView
+                    android:id="@+id/tv_loan_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/width_28dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/width_25dp"
+                    android:text="@string/usage_of_loan"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <TextView
+                    android:id="@+id/tv_Loan_Use"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="@dimen/width_7dp"
+                    android:text="@string/please_choose"
+                    android:textColor="@color/color_D0D0D0"
+                    android:textSize="@dimen/size_14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:elevation="@dimen/width_10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_Loan_Use"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_Loan_Use"
+                    app:srcCompat="@mipmap/ic_triange_new" />
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    style="@style/text_submit"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="34dp"
+                    android:background="@drawable/selector_text_submit_btn"
+                    android:enabled="true"
+                    android:text="@string/immediate_application"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.qmuiteam.qmui.layout.QMUIFrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_fadada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/width_6dp"
+        android:layout_marginRight="@dimen/width_6dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/qmuiFrameLayout">
+
+        <ImageView
+            android:id="@+id/iv_sign_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_sign_contract"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_sign_head"
+            android:layout_width="@dimen/width_53dp"
+            android:layout_height="@dimen/width_56dp"
+            android:layout_marginStart="@dimen/width_19dp"
+            android:layout_marginTop="@dimen/width_33dp"
+            android:layout_marginBottom="@dimen/width_26dp"
+            android:src="@mipmap/ic_sign_reviewing"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_sign_bg"
+            app:layout_constraintStart_toStartOf="@+id/iv_sign_bg"
+            app:layout_constraintTop_toTopOf="@+id/iv_sign_bg" />
+
+        <TextView
+            android:id="@+id/tv_sign_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/width_6dp"
+            android:layout_marginTop="@dimen/width_35dp"
+            android:layout_marginEnd="@dimen/width_6dp"
+            android:textColor="@color/color_333333"
+            android:textSize="15.5sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_sign_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/tv_go_to_sign"
+            app:layout_constraintStart_toEndOf="@+id/iv_sign_head"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="借款申请审核中" />
+
+        <TextView
+            android:id="@+id/tv_sign_bottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_5dp"
+            android:layout_marginBottom="37dp"
+            tools:text="如审核通过需进行电子签章签约"
+            android:textColor="@color/color_9A9A9A"
+            android:textSize="12.5sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_sign_bg"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sign_top"
+            app:layout_constraintStart_toStartOf="@+id/tv_sign_top"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sign_top"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_go_to_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/width_43dp"
+            android:layout_marginRight="@dimen/width_23dp"
+            android:layout_marginBottom="@dimen/width_47dp"
+            android:background="@drawable/bg_loan_sign_able"
+            android:paddingLeft="@dimen/width_10dp"
+            android:paddingTop="@dimen/width_4dp"
+            android:paddingRight="@dimen/width_10dp"
+            android:paddingBottom="@dimen/width_4dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/size_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_sign_bg"
+            app:layout_constraintRight_toRightOf="@+id/iv_sign_bg"
+            app:layout_constraintTop_toTopOf="@+id/iv_sign_bg"
+            tools:text="去签约"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

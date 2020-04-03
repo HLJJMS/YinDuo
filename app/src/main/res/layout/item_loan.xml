@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/width_20dp"
+    android:paddingEnd="@dimen/width_20dp"
+    android:paddingBottom="@dimen/width_20dp">
+
+    <com.qmuiteam.qmui.layout.QMUILinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/qmuill"
+        app:layout_constraintDimensionRatio="335:90"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/qmuiRadiusImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+    </com.qmuiteam.qmui.layout.QMUILinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

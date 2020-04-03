@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.yinduowang.installment.app.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_15sp"
+        android:text="总额度(元)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/tvTotalQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView39"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textview12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="可用额度"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalQuota"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalQuota" />
+
+    <TextView
+        android:id="@+id/tvAvailableQuota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="@dimen/size_18sp"
+        android:textColor="@color/color_333333"
+        app:layout_constraintStart_toStartOf="@+id/textview12"
+        app:layout_constraintTop_toBottomOf="@+id/textview12" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:text="已使用"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textview12"
+        app:layout_constraintStart_toEndOf="@+id/textview12"
+        app:layout_constraintTop_toTopOf="@+id/textview12" />
+
+    <TextView
+        android:id="@+id/tvHadUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="@dimen/size_18sp"
+        android:textColor="@color/color_333333"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAvailableQuota"
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/tvAvailableQuota" />
+
+    <TextView
+        android:id="@+id/tvFindLoanRecoder"
+        style="@style/text_submit"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="@dimen/size_16sp"
+        android:text="查看借款记录"
+        android:enabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailableQuota" />
+
+    <TextView
+        android:id="@+id/tvWarn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/color_FF3763"
+        android:textSize="@dimen/size_13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFindLoanRecoder" />
+</androidx.constraintlayout.widget.ConstraintLayout>
